@@ -1,0 +1,249 @@
+/* Estilos Gerais */
+/* Define a fonte padrão, remove margens e preenchimentos padrão, e configura o modelo de caixa para todos os elementos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto padrão */
+}
+
+/* Estilos para o contêiner principal que centraliza o conteúdo */
+.container {
+    width: 90%; /* Largura do contêiner */
+    max-width: 1200px; /* Largura máxima para telas grandes */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 20px 0; /* Preenchimento superior e inferior */
+}
+
+/* Estilos do Cabeçalho */
+.header {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto branca */
+    padding: 15px 0; /* Preenchimento superior e inferior */
+    position: sticky; /* Faz o cabeçalho "grudar" no topo ao rolar */
+    top: 0; /* Posição no topo da tela */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave para o cabeçalho */
+}
+
+/* Estilos para o contêiner dentro do cabeçalho */
+.header .container {
+    display: flex; /* Usa flexbox para alinhar itens */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+/* Estilos do logotipo */
+.logo {
+    margin: 0;
+    font-size: 2em; /* Tamanho da fonte do logotipo */
+}
+
+/* Estilos da lista de navegação */
+.nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usa flexbox para alinhar os itens do menu */
+}
+
+/* Estilos dos itens da lista de navegação */
+.nav ul li {
+    margin-left: 20px; /* Espaçamento entre os itens do menu */
+}
+
+/* Estilos dos links de navegação */
+.nav ul li a {
+    color: #fff; /* Cor do texto branca */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Texto em negrito */
+    transition: color 0.3s ease; /* Transição suave na mudança de cor */
+}
+
+/* Estilos dos links de navegação ao passar o mouse */
+.nav ul li a:hover {
+    color: #FFC107; /* Cor amarela ao passar o mouse */
+}
+
+/* Seção Principal (Hero Section) */
+.hero {
+    background-color: #E8F5E9; /* Cor de fundo verde claro */
+    text-align: center; /* Centraliza o texto */
+    padding: 100px 0; /* Preenchimento superior e inferior */
+}
+
+/* Estilos do título da seção principal */
+.hero h2 {
+    font-size: 3em; /* Tamanho da fonte */
+    color: #4CAF50; /* Cor do texto verde */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+/* Estilos do parágrafo da seção principal */
+.hero p {
+    font-size: 1.2em; /* Tamanho da fonte */
+    max-width: 800px; /* Largura máxima do parágrafo */
+    margin: 0 auto 30px auto; /* Centraliza e adiciona margem inferior */
+}
+
+/* Estilos do botão */
+.btn {
+    display: inline-block; /* Permite definir largura e altura, mas se comporta como texto */
+    background-color: #FF9800; /* Cor de fundo laranja */
+    color: #fff; /* Cor do texto branca */
+    padding: 10px 20px; /* Preenchimento interno */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s ease; /* Transição suave na mudança de cor de fundo */
+}
+
+/* Estilos do botão ao passar o mouse */
+.btn:hover {
+    background-color: #FB8C00; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Estilos para todas as seções de conteúdo */
+.section {
+    padding: 80px 0; /* Preenchimento superior e inferior */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos para seções pares (para alternar cores de fundo) */
+.section:nth-of-type(even) {
+    background-color: #f9f9f9; /* Cor de fundo cinza claro para seções pares */
+}
+
+/* Estilos dos títulos das seções */
+.section h2 {
+    font-size: 2.5em; /* Tamanho da fonte */
+    color: #4CAF50; /* Cor do texto verde */
+    margin-bottom: 40px; /* Margem inferior */
+}
+
+/* Galeria de Imagens */
+.image-gallery {
+    display: grid; /* Usa grid para organizar as imagens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
+    gap: 20px; /* Espaçamento entre as imagens */
+    margin-top: 30px; /* Margem superior */
+}
+
+/* Estilos das imagens na galeria */
+.image-gallery img {
+    width: 100%; /* Largura total do contêiner */
+    height: 200px; /* Altura fixa */
+    object-fit: cover; /* Corta a imagem para preencher o espaço, mantendo a proporção */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transição suave na transformação */
+}
+
+/* Estilos das imagens na galeria ao passar o mouse */
+.image-gallery img:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
+}
+
+/* Tabela de Produtos */
+.table-container {
+    overflow-x: auto; /* Adiciona barra de rolagem horizontal se a tabela for muito larga */
+    margin-top: 30px; /* Margem superior */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    border-radius: 8px; /* Cantos arredondados */
+}
+
+.product-table {
+    width: 100%; /* Largura total do contêiner */
+    border-collapse: collapse; /* Colapsa as bordas da tabela */
+    background-color: #fff; /* Cor de fundo branca */
+}
+
+/* Estilos para cabeçalhos e células da tabela */
+.product-table th,
+.product-table td {
+    padding: 15px; /* Preenchimento interno */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    border-bottom: 1px solid #ddd; /* Borda inferior */
+}
+
+/* Estilos para os cabeçalhos da tabela */
+.product-table th {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto branca */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilos para linhas pares da tabela */
+.product-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo cinza claro para linhas pares */
+}
+
+/* Estilos para linhas da tabela ao passar o mouse */
+.product-table tr:hover {
+    background-color: #e0e0e0; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Contato */
+.contact-info {
+    margin-top: 30px; /* Margem superior */
+    font-size: 1.1em; /* Tamanho da fonte */
+}
+
+.contact-info p {
+    margin-bottom: 10px; /* Margem inferior para parágrafos */
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333; /* Cor de fundo cinza escuro */
+    color: #fff; /* Cor do texto branca */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Preenchimento superior e inferior */
+    margin-top: 50px; /* Margem superior */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+/* Estilos aplicados quando a largura da tela é no máximo 768px (para dispositivos móveis) */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column; /* Alinha os itens do cabeçalho em coluna */
+    }
+
+    .nav ul {
+        margin-top: 15px; /* Margem superior para o menu */
+        flex-direction: column; /* Alinha os itens do menu em coluna */
+        align-items: center; /* Centraliza os itens do menu */
+    }
+
+    .nav ul li {
+        margin: 5px 0; /* Espaçamento vertical entre os itens do menu */
+    }
+
+    .hero h2 {
+        font-size: 2.5em; /* Reduz o tamanho da fonte do título principal */
+    }
+
+    .hero p {
+        font-size: 1em; /* Reduz o tamanho da fonte do parágrafo principal */
+    }
+
+    .section h2 {
+        font-size: 2em; /* Reduz o tamanho da fonte dos títulos das seções */
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr; /* Uma coluna para a galeria de imagens */
+    }
+
+    .product-table th,
+    .product-table td {
+        padding: 10px; /* Reduz o preenchimento da tabela */
+        font-size: 0.9em; /* Reduz o tamanho da fonte da tabela */
+    }
+}
+
